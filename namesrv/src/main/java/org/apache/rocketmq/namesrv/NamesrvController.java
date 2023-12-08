@@ -91,6 +91,7 @@ public class NamesrvController {
         if (TlsSystemConfig.tlsMode != TlsMode.DISABLED) {
             // Register a listener to reload SslContext
             try {
+                //监控对应的文件信息，通过hash值变化
                 fileWatchService = new FileWatchService(
                     new String[] {
                         TlsSystemConfig.tlsServerCertPath,
